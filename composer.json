@@ -9,7 +9,9 @@
             "email": "al.dighton@outlook.com"
         }
     ],
-    "require": {},
+    "require": {
+        "twig/twig": "^2.10"
+    },
     "autoload": {
         "classmap": [
             "classes/"
