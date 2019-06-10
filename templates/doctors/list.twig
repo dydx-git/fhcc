@@ -1,35 +1,30 @@
-            <div class="column is-9">
-                <nav class="breadcrumb" aria-label="breadcrumbs">
-                    <ul>
-                        <li><a href="../">Home</a></li>
-                        <li class="is-active"><a href="#" aria-current="page">Doctor</a></li>
-                    </ul>
-                </nav>
-                <table class="table is-bordered is-hoverable">
-					<thead>
-						<tr>
-					      <th>Name</th>
-					      <th>Title</abbr></th>
-					      <th>Qualifications</th>
-					      <th><abbr title="Joining Date">Date</abbr></th>
-					      <th>Branch</th>
-					    </tr>
-					</thead>
-					<tbody>
-						{% for doctor in doctors %}
-						<tr>
-							<td>{{ doctor.name }}</td>
-							<td>{{ doctor.titleid }}</td>
-							<td>Qualifications</td>
-							<td>{{ doctor.joining_date }}</td>
-							<td>G.J</td>
-						</tr>
-						{% endfor %}
-					</tbody>
-				</table>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
+<div class="column is-three-fifths">
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="../">Home</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Doctor</a></li>
+        </ul>
+    </nav>
+    <table class="table is-bordered is-hoverable">
+		<thead>
+			<tr>
+		      <th>Name</th>
+		      <th>Title</abbr></th>
+		      <th>Qualifications</th>
+		      <th><abbr title="Joining Date">Date</abbr></th>
+		      <th>Branch</th>
+		    </tr>
+		</thead>
+		<tbody>
+			{% for doctor in doctors %}
+			<tr>
+				<td>{{ doctor.name }}</td>
+				<td>{{ doctor.titleid }}</td>
+				<td>Qualifications</td>
+				<td>{{ doctor.joining_date }}</td>
+				<td>G.J</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>

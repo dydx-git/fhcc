@@ -1,0 +1,1 @@
+// document.getElementById("add-doctor").style.display="none";
