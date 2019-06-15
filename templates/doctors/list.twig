@@ -1,4 +1,4 @@
-<div class="column is-three-fifths">
+<div class="column">
     <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li><a href="../">Home</a></li>
@@ -20,9 +20,9 @@
 			<tr>
 				<td>{{ doctor.name }}</td>
 				<td>{{ doctor.titleid }}</td>
-				<td>Qualifications</td>
-				<td>{{ doctor.joining_date }}</td>
-				<td>G.J</td>
+				<td>{{ doctor.xplevel }}</td>
+				<td>{{ doctor.joining_date | date('jS F Y') }}</td>
+				<td>{{ doctor.branchid }}</td>
 			</tr>
 			{% endfor %}
 		</tbody>

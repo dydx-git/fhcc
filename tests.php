@@ -9,17 +9,18 @@ $titlesTable = new ORM($pdo, 'title', 'id');
 link: http://www.pamf.org/physicians/titles.html
 I've added one for you so you can check out the insert function format */
 $titlesTable->insert([
-    'name' => 'Audiologist',
-    'code' => 'A.U',
+    'name' => 'Adult Nurse Practitioner',
+    'code' => 'ANP',
 ]);
 
 /* Add different doctors.. keep in mind that the titleid is a foreign key
 to the table `title` and `xplevel` ranges from 1-10
  */
 $doctorsTable->insert([
-    'name' => 'Shakoora Taylor',
-    'titleid' => 1,
-    'xplevel' => 3,
+    'name' => 'Richard Iftikhar',
+    'titleid' => 2,
+    'xplevel' => 1,
+    'branchid' => 0
 ]);
 
 /* Similarly, study the ORM class and conduct different tests..

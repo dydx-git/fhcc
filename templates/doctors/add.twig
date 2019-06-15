@@ -1,4 +1,4 @@
-<form class="form-horizontal" id="add-doctor" style="padding: -10px">
+<form class="form-horizontal" id="add-doctor">
 	<fieldset>
 
 	<!-- Form Name -->
@@ -15,19 +15,33 @@
 
 	<!-- Select Basic -->
 	<div class="field">
-	  <label class="label" for="titleselect">Doctor's Title</label>
+	  <label class="label" for="titleselect">Medical Title</label>
 	  <div class="control">
 	  	<div class="select">
 		    <select id="titleselect" name="titleselect">
-		      <option>Option one</option>
-		      <option>Option two</option>
+				{% for title in titles %}
+				  <option selected value="null">Select a title</option>
+				  <option value="{{ title.id }}">{{ title.name }}</option>
+				{% endfor %}
 		    </select>
 		</div>
 	  </div>
 	</div>
 
-	<!-- Multiple Radios (inline) -->
-	<input class="slider is-fullwidth is-danger" step="1" min="0" max="100" value="50" type="range">
+	<!-- Select Basic -->
+	<div class="field">
+	  <label class="label" for="xpselect">Experience</label>
+	  <div class="control">
+	  	<div class="select">
+		    <select id="xpselect" name="xpselect">
+		      <option selected value="null">Select an experience</option>
+		      {% for experience in experiences %}
+				  <option value="{{ experience.id }}">{{ experience.name }}</option>
+			  {% endfor %}
+		    </select>
+		</div>
+	  </div>
+	</div>
 
 
 	<!-- Select Basic -->
@@ -36,9 +50,10 @@
 	  <div class="control">
 	  	<div class="select">
 		    <select id="docbranch" name="docbranch" class="">
-		      <option>Branch 1</option>
-		      <option>Branch 2</option>
-		      <option>Branch 3</option>
+		      <option selected value="null">Branch name</option>
+		      {% for branch in branches %}
+				  <option value="{{ branch.id }}">{{ branch.name }}</option>
+			  {% endfor %}
 		    </select>
 		</div>
 	  </div>
