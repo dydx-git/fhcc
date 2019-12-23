@@ -18,7 +18,7 @@ to the table `title` and `xplevel` ranges from 1-10
  */
 $doctorsTable->insert([
     'name' => 'Shakoora Taylor',
-    'titleid' => 1,
+    'titleid' => 0,
     'xplevel' => 3,
 ]);
 
