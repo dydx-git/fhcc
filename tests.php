@@ -9,7 +9,7 @@ $titlesTable = new ORM($pdo, 'title', 'id');
 link: http://www.pamf.org/physicians/titles.html
 I've added one for you so you can check out the insert function format */
 $titlesTable->insert([
-    'name' => 'Audiologist',
+    'name' => 'The rapist',
     'code' => 'A.U',
 ]);
 
